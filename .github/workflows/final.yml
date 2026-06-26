@@ -1,5 +1,4 @@
 name: Go Docker CI/CD
-
 on:
   push:
     branches: ["main"]
