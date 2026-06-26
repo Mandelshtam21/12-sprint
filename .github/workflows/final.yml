@@ -10,12 +10,15 @@ jobs:
   test:
     name: Check code and run tests
     runs-on: ubuntu-22.04
-    container: golang:1.25
+  #  container: golang:1.25
     
     steps:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Set up GO
+      uses: actions/setup-go@v6.5.0
+      
     - name: Run go vet
       run: go vet ./...
 
